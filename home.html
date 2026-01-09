@@ -43,5 +43,24 @@
         <a href="snape.html">Snape</a>
         <a href="voldemort.html">Voldemort</a>
     </div>
+    <section>
+        <img class="mySlides" src="harry-potter-it-all-ends-18u1rkvpzotfmi49.jpg" style="height:500px;">
+        <img class="mySlides" src="images.jfif" style="height:500px;">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {mylength = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
 </body>
 </html>
